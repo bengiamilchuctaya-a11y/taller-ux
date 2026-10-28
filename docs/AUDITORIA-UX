@@ -1,0 +1,40 @@
+# Auditoría de UX/UI y Accesibilidad
+
+## 1. Tabla de Auditoría (5 Heurísticas de Nielsen)
+
+| Heurística                         | Problema de la pantalla original                                                             | Solución aplicada                                                                                             |
+| :--------------------------------- | :------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| **Visibilidad del estado**         | Al hacer clic en enviar no aparecía nada en pantalla y no se sabía si funcionó.              | Se agregó un mensaje de estado visible en pantalla que avisa si faltan datos o si la inscripción fue exitosa. |
+| **Coincidencia con el mundo real** | El botón decía «ok» y la imagen del encabezado era una vizcacha sin relación con el tema.    | Se cambió el texto del botón a «Inscribirme» y se colocó una foto real de estudiantes en un laboratorio.      |
+| **Control y libertad**             | El botón de borrar limpiaba todo de un solo clic sin pedir confirmación ni dar vuelta atrás. | Se implementó un mensaje de confirmación antes de borrar y un botón neutro de cancelar.                       |
+| **Prevención de errores**          | Te dejaba enviar el formulario vacío o escribir un correo sin «@».                           | Se activó la validación para impedir el envío si hay campos vacíos o correos con formato incorrecto.          |
+| **Reconocer antes que recordar**   | No había etiquetas fijas; al escribir en una casilla, la pista (`placeholder`) desaparecía.  | Se colocaron etiquetas (`<label>`) visibles y fijas arriba de cada campo de entrada.                          |
+
+---
+
+## 2. Leyes de UX Aplicadas
+
+- **Ley de Fitts:** El botón principal «Inscribirme» se hizo más grande, con una altura mínima de 44px y un color llamativo para que sea fácil y rápido de presionar con el ratón o el dedo.
+- **Ley de Hick:** La lista desplegable con 12 talleres desordenados se dividió en 3 categorías claras (`<optgroup>`), lo que reduce el tiempo de decisión del usuario.
+- **Ley de Miller:** El formulario se organizó en 2 bloques numerados simples («1. Tus datos» y «2. Tu taller»), evitando sobrecargar la memoria de trabajo del usuario.
+
+---
+
+## 3. Mejoras de Accesibilidad y Estilos
+
+- **Campos e Imágenes:** Todos los inputs tienen su respectivo `<label>` asociado y la imagen principal incluye texto descriptivo (`alt`).
+- **Navegación por Teclado:** Se configuró `:focus-visible` con un borde naranja llamativo para que el usuario sepa siempre en qué casilla está parado con la tecla Tab.
+- **Botones y Contraste:** Todos los botones miden al menos 44px de alto y los colores respetan una relación de contraste superior a 4.5:1.
+- **Variables CSS:** Se definieron los colores e identificadores en `:root` para mantener consistencia visual.
+
+---
+
+## 4. Evaluaciones de Lighthouse
+
+### Antes del Rediseño
+
+![Lighthouse Antes](../img/pruebalightroom.png)
+
+### Después del Rediseño
+
+![Lighthouse Después](../img/pruebalightroom2.png)
