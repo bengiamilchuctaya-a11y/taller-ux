@@ -1,7 +1,7 @@
 # Taller UX
 
 Formulario de inscripcion redisenado aplicando principios de UX/UI.
-Pagina publicada: https://bengiamilchuctaya-a11y.github.io/taller-ux/
+Pagina publicada: https://github.com/bengiamilchuctaya-a11y/taller-ux
 
 ## Cambios aplicados
 
